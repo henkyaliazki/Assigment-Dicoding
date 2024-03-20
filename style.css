@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    height: max-content;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* gaya untuk modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.modal-content h2{
+    margin: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Gaya untuk header dan nav */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #0A1D56;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoNav {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Gaya untuk dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #0A1D56;
+    padding: 10px;
+}
+
+.dropdownMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdownMenu ul li {
+    margin-bottom: 10px;
+}
+
+.dropdownMenu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    padding: 10px;
+}
+
+.slider {
+    width: 100%;
+    padding-bottom: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 300px;
+}
+
+/* Gaya untuk artikel */
+.content {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+}
+article {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #0A1D56;
+    margin-bottom: 15px;
+}
+
+article p {
+    color: #666;
+    line-height: 1.6;
+}
+
+aside {
+    flex: 1;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    color: #0A1D56;
+    margin-bottom: 15px;
+}
+aside img {
+    width: 80px;
+
+
+}
+aside p {
+    color: #666;
+    line-height: 1.6;
+}
+
+aside li {
+    list-style: none;
+    line-height: 1.6;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #0A1D56;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
+
+/* CSS untuk layar kecil */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logoNav {
+        width: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dropdownMenu {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: #0A1D56;
+        padding: 10px;
+    }
+
+    .dropdown:hover .dropdownMenu {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    article,
+    aside {
+        margin-right: 0;
+    }
+
+    .slider img {
+        height: 200px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+/* CSS untuk layar sedang dan besar */
+@media screen and (min-width: 769px) {
+    .slider img {
+        height: 300px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+}
