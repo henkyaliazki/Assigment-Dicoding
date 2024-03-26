@@ -1,7 +1,7 @@
 //modal
 window.onload = function () {
-	var modal = document.getElementById("myModal");
-	var span = document.getElementsByClassName("close")[0];
+	let modal = document.getElementById("myModal");
+	let span = document.getElementsByClassName("close")[0];
 
 	modal.style.display = "block";
 
